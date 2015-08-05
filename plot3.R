@@ -1,3 +1,4 @@
+#We assume that the data file downloaded and unzipped from the internet is stored in the same folder as the R script file, with the name epower.txt
 df <- read.table("epower.txt",sep=";",header = TRUE,stringsAsFactors = FALSE)
 df$Date = as.Date(df$Date,"%d/%m/%Y")
 sf <- df[df$Date >= "2007-02-01" & df$Date <= "2007-02-02",]
